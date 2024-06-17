@@ -1,7 +1,7 @@
 from utils import input_file, processed_file
 
 
-def process_data(param_1, param_2):
+def process_data(param_1=None, param_2=None):
     # Capture params
     print("\nParams:", param_1, param_2, "\n")
 

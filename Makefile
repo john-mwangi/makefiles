@@ -15,7 +15,7 @@ $(DATADIR)/processed_data.txt: $(DATADIR)/input_data.txt $(SCRIPTDIR)/process_da
 # below is the syntax for creating a rule:
 # {target_file}: {dependency_file_1} {dependency_file_2} {dependency_file_3}
 # @echo "print something to the terminal"
-# python file_to_run param1 param2
+# python file_to_run.py param1 param2
 # how do we get param1 and param2 variables?
 # $< means the first dependency i.e. dependency_file_1
 # $@ means the target i.e. target_file
