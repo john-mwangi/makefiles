@@ -1,4 +1,6 @@
 # make -f Makefile
+# This Makefile will rebuild results.txt if its dependencies change
+# It will also rebuild processed_data.txt if its dependencies change
 
 # Define variables for directories
 DATADIR = data
@@ -29,3 +31,12 @@ $(DATADIR)/results.txt: $(DATADIR)/processed_data.txt $(SCRIPTDIR)/analyse_data.
 # Clean the data directory
 clean:
 	rm -f $(DATADIR)/*.txt
+
+# Why doesnt the "all" target include processed_data.txt?
+# the results.txt rule already has a dependency on 
+# processed_data.txt which will ensure that processed_data.txt 
+# exists before the rule is executed
+
+# Will it still work if you replace processed_data.txt with
+# processed_data? No. replacing a file target with a phony target
+# will result in the rule being run every time even with no changes
