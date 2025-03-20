@@ -40,3 +40,4 @@ clean:
 # Will it still work if you replace processed_data.txt with
 # processed_data? No. replacing a file target with a phony target
 # will result in the rule being run every time even with no changes
+# sample: https://github.com/suitenumerique/docs/blob/main/Makefile
